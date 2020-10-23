@@ -1,7 +1,13 @@
 # Marlabs
 
 
-Gemini Health is a provider of medical database integration system. It delivers drug cost decision support services to prescribers at the point-of-care to reduce drug and administrative costs for patients, providers and payers. It would provide information including the actual patient-specific costs of drugs, as well as lower cost equivalent alternative drugs and pharmacies, based upon the patient's pharmacy benefit, formularies, and related health plan coverage details. 
-The main goal of this project was remodeling the architecture of the web application from monolithic to microservices and make it to be more loosely coupled, more secured and with more scalability. 
+Gemini Health is a provider of medical database integration system. 
 
-My responsibility for this project is to use spring boot for the migration to the microservices architecture 
+My responsibility for this project is to use spring boot for the migration to the microservices architecture.
+The migration includes generating different modules for the medical database integration system such as personal info modules, search alternative medicines products modules and find nearby pharmacy stores and medicines modules. 
+I then used Spring cloud netflix, eureka, hytrix for checking the health of the microservices and fallback methods.
+For security, I used jwt with saml for authetification and authorization with single sign on that allows users with different roles could access different resources.
+for database that stores the information of users and products, I used hibernate with mysql database.
+for front end, I used Angular for the single page application and html, css and bootstrap.
+To inform the customers with the medicines information that they are interested in, I use kafka for the messaging system which would pass the messages to different customers.
+The project follows TDD and agile development. I use Jira for bug tracking and jenkins for CICD pipeline.
